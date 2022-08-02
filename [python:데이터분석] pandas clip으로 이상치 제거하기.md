@@ -9,8 +9,8 @@
 
 ## clip
 pandas library의 clip 메소드는 위, 혹은 아래의 기준치를 넘어가는 데이터를 잘라냅니다.  
-<br>
 
+---
 ```python
 data = {'col_0': [9, -3, 0, -1, 5], 'col_1': [-2, -7, 6, 8, -5]}
 df = pd.DataFrame(data)
@@ -21,8 +21,8 @@ df = pd.DataFrame(data)
 # 3     -1      8
 # 4      5     -5
 ```
-<br>
-
+---
+---
 ```python
 df.clip(-4, 6)
 #    col_0  col_1
@@ -32,16 +32,20 @@ df.clip(-4, 6)
 # 3     -1      6
 # 4      5     -4
 ```
+---
+
 이처럼 위, 아래 기준을 정해주면 기준을 넘어가는 데이터를 ***min, max***에 맞추어 잘라내게 됩니다.
 
+
 ## 사용 예시
+---
 ~~~python
 quantile_05 = df['col_0'].quantile(0.05) 
 quantile_95 = df['col_0'].quantile(0.95) 
 
 df['col_0'] = df['col_0'].clip(quantile_05, quantile_95)
 ~~~
-<br>
+---
 
 위와 같이 quantile 함수와 함께 사용하면 이상치를 쉽게 제거할 수 있습니다.  
 drop하여 이상치를 제거하는 방법도 있지만 clip을 사용하면 나머지 컬럼의 특성을 살릴 수 있다는 장점이 있습니다.
