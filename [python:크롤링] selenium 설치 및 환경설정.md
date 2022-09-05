@@ -14,12 +14,12 @@ pip install selenium
 from selenium import webdriver
 
 url = "https://naver.com"
-browser = webdriver.Chrome('./chromedriver')
+browser = webdriver.Chrome('/Users/OOOOO/Documents/GitHub/study/크롤링/chromedriver')
 browser.get(url)
 ~~~
 ---
-기본적으로 chromedriver를 이용해 시작하는 방식입니다.  
-chromedriver 파일을 .py 파일과 동일한 위치에 옮겨두었기 때문에 경로를 "./chromedriver"로 지정하였습니다.
+기본적으로 chromedriver를 이용해 chrome을 실행시키는 방법입니다.시작하는 방식입니다.  
+Chrome 메소드의 파라미터로 chromedriver 파일의 경로를 지정해줍니다.  
 
 ## FileNotFoundError: [Errno 2] No such file or directory: 'chromedriver'
 ---

@@ -1,32 +1,35 @@
 <!-- [python/크롤링] 다방 월세 크롤링 by requests -->
 
 ## 다방 크롤링이란?
-지도로 보면 지역별 매물을 쉽게 찾아볼 수 있지만 넓은 지역의 원하는 조건의 매물을 찾을 땐 불편함이 있다.  
-크롤링을 이용하면 넓은 범위의 매물을 받아와 한눈에 확인할 수 있다.  
+지도로 보면 지역별 매물을 쉽게 찾아볼 수 있지만 넓은 지역의 원하는 조건의 매물을 찾을 땐 불편함이 있습니다.  
+크롤링을 이용하면 넓은 범위의 매물을 받아와 한눈에 확인할 수 있습니다.  
 
 ## 다방 API 확인하기
-다방의 API를 먼저 확인해야 한다.  
-KB 시세 다운로드와 마찬가지로 구글 크롬의 개발자 도구를 사용한다.  
+다방의 API를 먼저 확인해야 합니다.  
+KB 시세 다운로드와 마찬가지로 구글 크롬의 개발자 도구를 사용합니다.  
 (참고 : <https://ssorr.tistory.com/8?category=1028600>)  
 <br>
-다방 검색 화면에서 개발자 도구의 ***Network***를 누르고 지도를 살짝 움직이면 조회가 된다.  
-bbox로 시작되는 것을 클릭하면 Request URL이 나오는데 이것을 주소창에 치면 json 형태로 결과가 나오는 것을 확인할 수 있다.  
+다방 검색 화면에서 개발자 도구의 ***Network***를 누르고 지도를 살짝 움직이면 조회가 됩니다.  
+bbox로 시작되는 것을 클릭하면 Request URL이 나오는데 이것을 주소창에 치면 json 형태로 결과가 나오는 것을 확인할 수 있습니다.  
+![sample](https://github.com/dasoll/posting/blob/main/image/%5Bpython:%ED%81%AC%EB%A1%A4%EB%A7%81%5D%20%EB%8B%A4%EB%B0%A9%20%EC%9B%94%EC%84%B8%20%ED%81%AC%EB%A1%A4%EB%A7%81%20by%20requests.png?raw=true)
+
+
 
 ## URL 살펴보기
-API를 보면 URL 인코딩이 되어있어 알아보기 어렵다.  
-이것을 디코딩해서 보면 아래와 같다.  (참고 : <https://ssorr.tistory.com/9>)
+API를 보면 URL 인코딩이 되어있어 알아보기 어렵습니다.  
+이것을 디코딩해서 보면 아래와 같습니다.  (참고 : <https://ssorr.tistory.com/9>)
 ~~~ python
 https://www.dabangapp.com/api/3/marker/multi-room?api_version=3.0.1&call_type=web&filters={"multi_room_type":[3],"selling_type":[0],"deposit_range":[0,5000],"price_range":[0,999999],"trade_range":[0,999999],"maintenance_cost_range":[0,999999],"room_size":[0,999999],"supply_space_range":[0,999999],"room_floor_multi":[1,2,3,4,5,6,7,-1,0],"division":false,"duplex":false,"room_type":[],"use_approval_date_range":[0,999999],"parking_average_range":[0,999999],"household_num_range":[0,999999],"parking":false,"short_lease":false,"full_option":false,"built_in":false,"elevator":false,"balcony":false,"safety":false,"pano":false,"deal_type":[0,1]}&location=[[126.9719818,37.2200389],[127.5212982,37.5316083]]&version=1&zoom=11
 ~~~
 
-여기서 조건들과 위도, 경도, zoom을 설정하면 원하는 데이터를 가져올 수 있다.  
-팁이 있다면 직접 URL을 수정하는 것도 좋지만 원하는 조건을 다방에서 선택한 다음 조회해서 API를 가져오는 것이 쉽다.
+여기서 조건들과 위도, 경도, zoom을 설정하면 원하는 데이터를 가져올 수 있습니다.  
+팁이 있다면 직접 URL을 수정하는 것도 좋지만 원하는 조건을 다방에서 선택한 다음 조회해서 API를 가져오는 것이 쉽습니다.
 
 ## json 처리하기
-***requests***를 통해 주소창에 친 것처럼 주소를 요청하고 결과를 받아와서 처리한다.  
-json()을 통해 json으로 변경하고 우리가 원하는 방의 데이터를 얻기 위해 ***rooms***를 불러온다.  
-rooms에서 한개씩 데이터를 불러오고 마지막에 print하는 작업을 반복한다.  
-마지막 주소는 id를 통해 해당 주소를 호출하면 상세화면이 나오기 때문에 추가했다.  
+***requests***를 통해 주소창에 친 것처럼 주소를 요청하고 결과를 받아와서 처리합니다.  
+json()을 통해 json으로 변경하고 우리가 원하는 방의 데이터를 얻기 위해 ***rooms***를 불러옵니다.  
+rooms에서 한개씩 데이터를 불러오고 마지막에 print하는 작업을 반복합니다.  
+마지막 주소는 id를 통해 해당 주소를 호출하면 상세화면이 나오기 때문에 추가했습니다.  
 
 ~~~ python
 import requests
