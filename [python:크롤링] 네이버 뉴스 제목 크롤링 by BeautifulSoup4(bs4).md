@@ -1,7 +1,14 @@
 <!-- [python/크롤링] 네이버 뉴스 크롤링 by BeautifulSoup4(bs4)  -->
-## 네이버 뉴스 구조
-네이버 뉴스의 신문보기를 누르면 기사 제목이 카드 형식으로 연속적으로 나옵니다.  
-제목을 보고 생각을 사유하는 연습을 하기 위해 제목만 추출하는 크롤링을 만들었습니다.  
+## 네이버 뉴스 구조와 크롤링 목적
+
+네이버 뉴스의 신문보기를 누르면 기사 제목이 카드 형식으로 연속적으로 나옵니다. 
+제목만 보고 사유하는 연습을 하기 위해 제목을 추출하는 크롤링을 만들었습니다. 
+
+<br>
+
+<img src='https://github.com/dasoll/posting/blob/main/image/%5Bpython:%ED%81%AC%EB%A1%A4%EB%A7%81%5D%20%EB%84%A4%EC%9D%B4%EB%B2%84%20%EB%89%B4%EC%8A%A4%20%ED%81%AC%EB%A1%A4%EB%A7%81%20by%20BeautifulSoup4(bs4)_1.png?raw=true' width="400">
+
+<!-- ![image_1](https://github.com/dasoll/posting/blob/main/image/%5Bpython:%ED%81%AC%EB%A1%A4%EB%A7%81%5D%20%EB%84%A4%EC%9D%B4%EB%B2%84%20%EB%89%B4%EC%8A%A4%20%ED%81%AC%EB%A1%A4%EB%A7%81%20by%20BeautifulSoup4(bs4)_1.png?raw=true) -->
 
 ## BeautifulSoup 이용하여 html 추출
 requests와 bs4 라이브러리를 이용하여 html을 추출해보겠습니다.  
@@ -19,7 +26,16 @@ soup = bs4.BeautifulSoup(r.text, 'lxml')
 분석하고 싶은 곳에서 우클릭 후 검사를 누르면 크롬의 개발자 도구가 실행됩니다.  
 그리고 우클릭 했던 지점의 css를 바로 확인할 수 있습니다.  
 
-우선 1개의 단락의 class명이 newspaper_brick_item인 것을 기억해둡시다.
+![gif_2](https://github.com/dasoll/posting/blob/main/gif/%5Bpython:%ED%81%AC%EB%A1%A4%EB%A7%81%5D%20%EB%84%A4%EC%9D%B4%EB%B2%84%20%EB%89%B4%EC%8A%A4%20%ED%81%AC%EB%A1%A4%EB%A7%81%20by%20BeautifulSoup4(bs4)_2.gif?raw=true)
+
+
+<br>
+
+우선 단락의 class명이 newspaper_brick_item인 것을 기억해둡시다.
+
+<br>
+
+<img src='https://github.com/dasoll/posting/blob/main/image/%5Bpython:%ED%81%AC%EB%A1%A4%EB%A7%81%5D%20%EB%84%A4%EC%9D%B4%EB%B2%84%20%EB%89%B4%EC%8A%A4%20%ED%81%AC%EB%A1%A4%EB%A7%81%20by%20BeautifulSoup4(bs4)_3.png?raw=true' width="700">
 
 ## css selector
 bs4의 select 메소드를 이용하여 css 요소를 선택할 수 있습니다.  
@@ -45,6 +61,10 @@ for paragraph in paragraphs:
 ~~~
 ---
 h3 태그에 페이지 이름이 들어가 있고 strong 태그에 제목이 들어가있습니다.  
+
+<br>
+
+<img src='https://github.com/dasoll/posting/blob/main/image/%5Bpython:%ED%81%AC%EB%A1%A4%EB%A7%81%5D%20%EB%84%A4%EC%9D%B4%EB%B2%84%20%EB%89%B4%EC%8A%A4%20%ED%81%AC%EB%A1%A4%EB%A7%81%20by%20BeautifulSoup4(bs4)_4.png?raw=true' width="400">
 
 ## Word 파일로 만들기
 다음 포스팅에서 위의 결과를 쉽게 사용할 수 있도록 Word 파일로 만들어 보겠습니다.
