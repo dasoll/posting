@@ -2,26 +2,23 @@
 ## 마크다운 문서에 이미지 넣기
 
 마크다운에 이미지를 넣는 문법은 간단합니다.  
-
 <br>
-
 ~~~
 ![이미지 제목](이미지 주소)
 ~~~
-
 
 ## 디렉토리 경로로 이미지 넣기
 첫번째로 *.md 문서를 내 PC에서만 사용할 경우의 예시입니다.  
 *.md 문서와 같은 디렉토리에 image 폴더를 만들고 폴더 안에 있는 python 로고 이미지를 불러와보겠습니다.  
 이 때, 이미지 주소는 그 이미지의 실제 디렉토리 경로가 될 것입니다.
 
+![sample_1](https://github.com/dasoll/posting/blob/main/image/%5B%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4%5D%20Markdown%20%EB%AC%B8%EC%84%9C%EC%97%90%20%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EB%84%A3%EA%B8%B0%20with%20gif_1.png?raw=true)
+
 <br>
 
 ~~~python
 ![image_name](image/python_logo.png)
 ~~~
-
-<!-- 이미지1 -->
 
 <br>
 
@@ -43,12 +40,13 @@ preview에서 이미지가 잘 나오는 것을 확인할 수 있습니다.
 ~~~python
 ![image_name](https://github.com/dasoll/posting/blob/main/image/python_logo.png?raw=true)
 ~~~
-
 <br>
 
 위와 같이 디렉토리 경로만 이미지 주소로 바꿔주면 됩니다.  
 저는 주로 github 저장소에 미리 올려둔 이미지 파일을 사용합니다.  
 (어디든 인터넷에 올라온 이미지의 주소만 알면 이미지를 넣을 수 있습니다)  
+
+![sample_2](https://github.com/dasoll/posting/blob/main/image/%5B%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4%5D%20Markdown%20%EB%AC%B8%EC%84%9C%EC%97%90%20%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EB%84%A3%EA%B8%B0%20with%20gif_2.png?raw=true)
 
 ## gif 넣기
 움짤을 넣을 때도 인터넷에 파일만 올라가 있으면 문제 없습니다.  
