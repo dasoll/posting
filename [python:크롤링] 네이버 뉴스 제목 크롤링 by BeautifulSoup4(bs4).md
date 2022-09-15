@@ -39,7 +39,7 @@ soup = bs4.BeautifulSoup(r.text, 'lxml')
 
 ## css selector
 bs4의 select 메소드를 이용하여 css 요소를 선택할 수 있습니다.  
-(참고 : <https://www.crummy.com/software/BeautifulSoup/bs4/doc.ko/#:~:text=%EB%82%98%ED%83%80%EB%82%98%EB%8A%94%20%EA%B2%83%EC%9D%B4%20%EB%8B%B9%EC%97%B0%ED%95%98%EB%8B%A4.-,CSS%20%EC%84%A0%ED%83%9D%EC%9E%90,-%C2%B6>)  
+(참고 : [BeautifulSoup4 Document](https://www.crummy.com/software/BeautifulSoup/bs4/doc.ko/#:~:text=%EB%82%98%ED%83%80%EB%82%98%EB%8A%94%20%EA%B2%83%EC%9D%B4%20%EB%8B%B9%EC%97%B0%ED%95%98%EB%8B%A4.-,CSS%20%EC%84%A0%ED%83%9D%EC%9E%90,-%C2%B6))  
 그 중에서 class명으로 요소를 찾기 위해선 아래와 같은 코드를 사용하면 됩니다.  
 
 ~~~python
@@ -48,7 +48,7 @@ paragraphs = soup.select(".newspaper_brick_item")
 ---
 이제 paragraphs에는 A1면, A2면, ... 의 면들이 들어있는 객체가 됩니다.  
 
-## 페이지와 제묵 추출하기
+## 페이지와 제목 추출하기
 마지막으로 paragraphs를 돌며 페이지 이름과 제목을 추출합니다.  
 
 ~~~python
