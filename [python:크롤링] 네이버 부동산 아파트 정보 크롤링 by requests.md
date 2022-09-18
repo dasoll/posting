@@ -14,7 +14,7 @@
 
 크롤링을 위해 네이버 부동산의 API를 먼저 확인해야 합니다.  
 다방 크롤링과 마찬가지로 구글 크롬의 개발자 도구를 사용합니다.  
-(참고 : [[python/크롤링] 다방 월세 크롤링 by requests]())  
+(참고 : [[python/크롤링] 다방 월세 크롤링 by requests](https://ssorr.tistory.com/11))  
 
 <br>
 
