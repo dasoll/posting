@@ -15,7 +15,12 @@
 화면에서 단지정보를 누르면 나오는 request가 주르륵 나옵니다.  
 그 중에서 ***숫자?realEstateType***로 시작하는 request를 선택합니다.  
 
-<!-- gif -->
+<br>
+<div>
+<img src='https://github.com/dasoll/posting/blob/main/gif/%5Bpython:%ED%81%AC%EB%A1%A4%EB%A7%81%5D%20%EB%84%A4%EC%9D%B4%EB%B2%84%20%EB%B6%80%EB%8F%99%EC%82%B0%20%EC%95%84%ED%8C%8C%ED%8A%B8%20%EB%A7%A4%EB%AC%BC%20%ED%81%AC%EB%A1%A4%EB%A7%81%20by%20requests.gif?raw=true' width='800'>  
+</div>
+
+<br>
 
 preview를 보면 매물 정보가 들어가 있는 것을 확인할 수 있습니다.
 
