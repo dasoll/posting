@@ -36,6 +36,8 @@ os.path.splitext('test.xlsx')
 
 ## 예제
 
+<div>
+
 ~~~python
 import os
 import numpy as np
@@ -50,6 +52,10 @@ for dirpath, dirname, filenames in os.walk(path):
 print(np.unique(extensions))
 ~~~
 ---
+
+</div>
+
+<br>
 
 폴더 하위항목들 중에 어떤 확장자가 있는지 찾는 코드입니다.  
 확장자를 list에 append(저장)하고 unique 함수를 통해 중복을 제거합니다.  
