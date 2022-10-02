@@ -81,4 +81,8 @@ df_84_minmax = pd.concat([df_max, df_min]).sort_values(by=['articleName', 'dealO
 
 ## 결과
 
-<img src='' width=600>
+최대, 최소가 순서대로 나오고 동일하면 같은 매물이 2번 나오게 됩니다.  
+
+<br>
+
+<img src='https://github.com/dasoll/posting/blob/main/image/%5Bpython:%ED%81%AC%EB%A1%A4%EB%A7%81%5D%20%EB%84%A4%EC%9D%B4%EB%B2%84%20%EB%B6%80%EB%8F%99%EC%82%B0%20%EC%95%84%ED%8C%8C%ED%8A%B8%20%ED%98%B8%EA%B0%80%20%EC%B5%9C%EB%8C%80,%20%EC%B5%9C%EC%86%8C%20%EA%B5%AC%ED%95%98%EA%B8%B0.png?raw=true' width=600>
