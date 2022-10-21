@@ -12,7 +12,7 @@
 
 격자를 만드는 방법을 알아보겠습니다.
 
-## set_theme
+## set_style
 
 seaborn 패키지에서 제공하는 set_style 함수를 사용하면 됩니다.
 
@@ -40,20 +40,24 @@ sns.scatterplot(X.iloc[:, 0], y)
 
 ***whitegrid***, ***darkgrid*** 등의 스타일이 있습니다.
 
+<br>
+
 자세한 내용은 seaborn 공식 사이트에서 확인하실 수 있습니다.  
 [Seaborn figure styles](https://seaborn.pydata.org/tutorial/aesthetics.html#:~:text=the%20matplotlib%20defaults.-,Seaborn%20figure%20styles,-%23)
 
 <br>
 
-전  
+**[스타일 적용 전]**
 
-<img src="" width=500>
+<img src="https://github.com/dasoll/posting/blob/main/image/%5Bpython:%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D:%EC%8B%9C%EA%B0%81%ED%99%94%5D%20%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EA%B7%B8%EB%9E%98%ED%94%84%20%EA%B2%A9%EC%9E%90(grid)%20%EA%B7%B8%EB%A6%AC%EA%B8%B0%20set_theme%20seaborn%20matplotlib_2.png?raw=true" width=500 />
 
 <br>
 
-후
+<br>
 
-<img src="" width=500>
+**[스타일 적용 후]**
+
+<img src="https://github.com/dasoll/posting/blob/main/image/%5Bpython:%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D:%EC%8B%9C%EA%B0%81%ED%99%94%5D%20%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EA%B7%B8%EB%9E%98%ED%94%84%20%EA%B2%A9%EC%9E%90(grid)%20%EA%B7%B8%EB%A6%AC%EA%B8%B0%20set_theme%20seaborn%20matplotlib_1.png?raw=true" width=500 />
 
 ## style 원래대로 복구하기
 
