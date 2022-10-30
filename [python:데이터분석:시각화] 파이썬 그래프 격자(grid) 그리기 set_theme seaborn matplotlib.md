@@ -1,4 +1,4 @@
-<!-- [python/데이터분석/시각화] 파이썬 그래프 격자(grid) 그리기 set_theme seaborn matplotlib -->
+<!-- [python/데이터분석/시각화] 파이썬 그래프 격자(grid) 그리기 set_style seaborn matplotlib -->
 
 ## 그래프에서 격자 그리기
 
